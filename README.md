@@ -5,6 +5,6 @@ Here is some images from the system.
 Index page
 ![Alt text](wxsat_3.png?raw=true "WXSAT Index page")<br>
 Image
-![Alt text](7_stage_2m_filter_1.png?raw=true "Filter diagram")<br>
+![Alt text](NOAA19-HVCT-20170317-1552.png?raw=true "Satellite Image of South Africa")<br>
 Image
 ![Alt text](7_stage_2m_filter_1.png?raw=true "Filter diagram")<br>
