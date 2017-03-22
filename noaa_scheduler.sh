@@ -2,9 +2,9 @@
 #The original data I got from this link https://github.com/the2belo/wxsat-scheduler
 #get the lates TLE kept elemts for NOAA satellite
 wget -qr www.celestrak.com/NORAD/elements/weather.txt -O ~/wxsat/weather.txt
-sudo ./noaa-scheduler.sh 15 137.6200
-sudo ./noaa-scheduler.sh 18 137.9125
-sudo ./noaa-scheduler.sh 19 137.1000
+sudo ./noaa_sat_scheduler.sh 15 137.6200
+sudo ./noaa_sat_scheduler.sh 18 137.9125
+sudo ./noaa_sat_scheduler.sh 19 137.1000
 #NOAA 15 – 137.6200 MHz
 #NOAA 18 – 137.9125 MHz
 #NOAA 19 – 137.1000 MHz
