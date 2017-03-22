@@ -45,12 +45,13 @@ touch -r ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${b
 /usr/local/bin/wxtoimg -N -e MSA -m ~/wxsat/noaa${bird}map.png ~/wxsat/recordings/NOAA${bird}-\$recdate.wav ~/wxsat/images/NOAA${bird}-MSA-\$recdate.png
 #contrast enhans
 /usr/local/bin/wxtoimg -N -b -e contrast -m ~/wxsat/noaa${bird}map.png ~/wxsat/recordings/NOAA${bird}-\$recdate.wav ~/wxsat/images/NOAA${bird}-CONB-\$recdate.png
-bash ~/wxsat/Dropbox-Uploader/dropbox_uploader.sh upload ~/wxsat/images/NOAA${bird}-*-\$recdate.png /
+#bash ~/wxsat/Dropbox-Uploader/dropbox_uploader.sh upload ~/wxsat/images/NOAA${bird}-*-\$recdate.png /
 rm ~/wxsat/recordings/NOAA${bird}-\$recdate.raw
 EOF
 #schedule at
 at -f ~/wxsat/noaa${bird}.at -t $init
 done
-
+#create the thumbnails
+~/sh/create_thumbnail.sh
 #clear array
 unset var1[@]
