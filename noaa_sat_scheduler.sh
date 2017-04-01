@@ -52,6 +52,6 @@ EOF
 at -f ~/wxsat/noaa${bird}.at -t $init
 done
 #create the thumbnails
-~/sh/create_thumbnail.sh
+~/sh/create_thumpnail.sh
 #clear array
 unset var1[@]
