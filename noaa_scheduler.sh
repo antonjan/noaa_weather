@@ -1,3 +1,4 @@
+#!/bin/sh
 #Run for a satellite sceduling at midnight (cron scedule)
 #The original data I got from this link https://github.com/the2belo/wxsat-scheduler
 #get the lates TLE kept elemts for NOAA satellite
