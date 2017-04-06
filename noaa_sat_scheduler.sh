@@ -32,6 +32,7 @@ init=$(date -d "@$recstart" +%y%m%d%H%M)
 #create at file
 cat << EOF > ~/wxsat/noaa${bird}.at
 recdate=\$(date +%Y%m%d-%H%M)
+#mapdate "06 04 2017 18:44"
 mapdate=\$(date '+%d %m %Y %H:%M')
 timeout $rectime /usr/local/bin/rtl_fm -d 0 -f ${freq}M -s 48000 -g 49.6 -p 1 -F 9 -A fast -E DC ~/wxsat/recordings/NOAA${bird}-\$recdate.raw
 /usr/bin/sox -t raw -r 48000 -es -b16 -c1 -V1 ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${bird}-\$recdate.wav rate 11025
