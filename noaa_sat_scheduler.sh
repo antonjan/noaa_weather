@@ -36,6 +36,7 @@ mapdate=\$(date '+%d %m %Y %H:%M')
 timeout $rectime /usr/local/bin/rtl_fm -d 0 -f ${freq}M -s 48000 -g 49.6 -p 1 -F 9 -A fast -E DC ~/wxsat/recordings/NOAA${bird}-\$recdate.raw
 /usr/bin/sox -t raw -r 48000 -es -b16 -c1 -V1 ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${bird}-\$recdate.wav rate 11025
 touch -r ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${bird}-\$recdate.wav
+#wxmap  -T "NOAA 15" -d -a -o -G /home/anton/wxsat -H weather.txt -L "-26.17/-28.03/1700.0" "06 04 2017 18:44" ./NOAA15-201704-1844.png
 /usr/local/bin/wxmap -a -T "NOAA ${bird}" -H ~/wxsat/weather.txt -L "-26.17/-28.03/1700" -p0 -o "\$mapdate" ~/wxsat/noaa${bird}map.png
 /usr/local/bin/wxmap -a -T "NOAA ${bird}" -H ~/wxsat/weather.txt -L "-26.17/-28.03/1700" -p0 -o "\$mapdate" ~/wxtoimg/maps/noaa${bird}map.png
 #/home/anton/wxtoimg/maps
