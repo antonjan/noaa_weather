@@ -38,8 +38,8 @@ timeout $rectime /usr/local/bin/rtl_fm -d 0 -f ${freq}M -s 48000 -g 49.6 -p 1 -F
 /usr/bin/sox -t raw -r 48000 -es -b16 -c1 -V1 ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${bird}-\$recdate.wav rate 11025
 touch -r ~/wxsat/recordings/NOAA${bird}-\$recdate.raw ~/wxsat/recordings/NOAA${bird}-\$recdate.wav
 #wxmap  -T "NOAA 15" -d -a -o -G ~/wxsat -H weather.txt -L "-26.17/-28.03/1700.0" "06 04 2017 18:44" ./NOAA15-201704-1844.png
-wxmap -a -T "NOAA ${bird}" -G ~/wxsat -H weather.txt -L "-26.17/-28.03/1700" -p0 -o "\$mapdate" ~/wxsat/noaa${bird}map.png
-wxmap -a -T "NOAA ${bird}" -G ~/wxsat -H weather.txt -L "-26.17/-28.03/1700" -p0 -o "\$mapdate" ~/wxtoimg/maps/noaa${bird}map.png
+wxmap -a -T "NOAA ${bird}" -G ~/wxsat -H weather.txt -L "-26.17/28.03/1700" -p0 -o "\$mapdate" ~/wxsat/noaa${bird}map.png
+wxmap -a -T "NOAA ${bird}" -G ~/wxsat -H weather.txt -L "-26.17/28.03/1700" -p0 -o "\$mapdate" ~/wxtoimg/maps/noaa${bird}map.png
 #/home/anton/wxtoimg/maps
 /usr/local/bin/wxtoimg -N -e MCIR -m ~/wxsat/noaa${bird}map.png ~/wxsat/recordings/NOAA${bird}-\$recdate.wav ~/wxsat/images/NOAA${bird}-MCIR-\$recdate.png
 /usr/local/bin/wxtoimg -N -e HVCT -m ~/wxsat/noaa${bird}map.png ~/wxsat/recordings/NOAA${bird}-\$recdate.wav ~/wxsat/images/NOAA${bird}-HVCT-\$recdate.png
