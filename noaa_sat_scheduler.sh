@@ -19,7 +19,7 @@ freq=$2
 #calculate best passes
 for i in {00..23}
 do
-var1[10#$i]=$(predict -t ~/wxsat/weather.txt -q /home/anton/.predict/predict.qth -p "NOAA ${bird}" $(date -d "+$i hour" +%s) | awk '{ if($5>=30) print $0}' |sort -u | head -1)
+var1[10#$i]=$(predict -t ~/wxsat/weather.txt -q ~/.predict/predict.qth -p "NOAA ${bird}" $(date -d "+$i hour" +%s) | awk '{ if($5>=30) print $0}' |sort -u | head -1)
 done
 
 #calculate start-end for each pass
