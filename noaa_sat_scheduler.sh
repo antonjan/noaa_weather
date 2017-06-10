@@ -25,8 +25,8 @@ done
 #calculate start-end for each pass
 for x in $(printf -- '%s\n' "${var1[@]}" | grep : | awk '{print $1,$3$4}' | cut -d : -f 1,2 | sort -uk 2 | awk '{print $1}')
 do
-recstart=$(predict -t ~/wxsat/weather.txt -q /home/anton/.predict/predict.qth -p "NOAA ${bird}" $x | awk '{ if($5>=10) print $0}' | head -1 | awk '{print $1}')
-recend=$(predict -t ~/wxsat/weather.txt -q /home/anton/.predict/predict.qth -p "NOAA ${bird}" $x | awk '{ if($5>=10) print $0}' | tail -1 | awk '{print $1}')
+recstart=$(predict -t ~/wxsat/weather.txt -q ~/.predict/predict.qth -p "NOAA ${bird}" $x | awk '{ if($5>=10) print $0}' | head -1 | awk '{print $1}')
+recend=$(predict -t ~/wxsat/weather.txt -q ~/.predict/predict.qth -p "NOAA ${bird}" $x | awk '{ if($5>=10) print $0}' | tail -1 | awk '{print $1}')
 rectime=$(awk "BEGIN {print $recend-$recstart}")
 init=$(date -d "@$recstart" +%y%m%d%H%M)
 #create at file
