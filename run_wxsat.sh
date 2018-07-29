@@ -17,5 +17,7 @@ sudo /home/anton/sh/noaa-scheduler.sh 19 137.1000
 sudo echo "<html><body>" > /home/anton/wxsat/images/NOAA_schedule.html
 sudo /usr/bin/at -l >> /home/anton/wxsat/images/NOAA_schedule.html
 sudo echo "</body></html>" >> /home/anton/wxsat/images/NOAA_schedule.html
+sudo sed -i -e 's/root/<br>/g' /home/anton/wxsat/images/NOAA_schedule.html
+sudo sed -i -e 's/a//g' /home/anton/wxsat/images/NOAA_schedule.html
 #/usr/local/bin/wxmap -a -T "NOAA 15" -H ~/wxsat/weather.txt -L "-26.170/28.030/1700.0" -p0 -o "20 03 2017 18:43"  ~/wxsat/noaa15map.png
 #at 00:05 /home/anton/sh/run_wxsat.sh
